@@ -1,0 +1,26 @@
+
+{% extends "accounts/base.html" %}
+{% block content %}
+
+<div class="container">
+
+
+<div class="card m-4 shadow">
+     <div class="card-body">
+         <h2 class="card-title">{{ post.title }}</h2>
+         <pre class="card-text">{{ post.solution|safe}}</pre>   
+     </div>
+     <div class="card-footer text-muted">
+         Posted on {{ post.created_at|date:"F d, Y" }} 
+     </div>
+</div>
+<div class="button m-4">
+    
+     <a href="{% url 'dashboard' %}" class="btn btn-primary">&laquo;Back</a>
+    <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit</a>
+
+</div>
+</div>
+
+{% endblock content %}
+    

@@ -1,0 +1,21 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+<style>
+     p label{
+          color: red;
+     }
+</style>
+
+<div class="container">
+     <div class="m-4">
+     <form action="" method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+
+          <button class="btn btn-primary">Submit</button>
+     </form>
+     </div>
+</div>
+ 
+{% endblock content %}
+

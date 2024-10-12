@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+<style>
+     p label{
+          color: red;
+     }
+</style>
+
+<div class="container">
+     <div class="m-4">
+                           
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info inline">
+      {{message}} 
+      <a href="{% url 'dashboard' %}">Go back</a>
+    </div>
+    {% endfor %}
+  {% endif %}  
+
+     <form action="" method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button class="btn btn-primary">save</button>
+     </form>
+     </div>
+</div>
+ 
+{% endblock content %}
+

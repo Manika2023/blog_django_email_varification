@@ -1,0 +1,18 @@
+
+{% extends "accounts/base.html" %}
+{% block content %}
+<!--  Request me for a signup form or any type of help  -->
+<div class="global-container">
+    <div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">Here your mail is verified</h3>
+            <div class="card-text text-center">
+                Please Login
+               </div>
+               <div class="text-center">
+                    <a class="btn btn-primary" href="{% url 'auth/login' %}">Login</a>
+               </div>
+        </div>
+    </div>
+</div>
+    

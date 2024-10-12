@@ -1,0 +1,17 @@
+
+{% extends "accounts/base.html" %}
+{% block content %}
+
+<div class="container">
+     <div class="m-4">
+          <h1>Are you sure you want to  delete "{{post.title}}</h1>
+          <form action="" method="post">
+               {% csrf_token %}
+               <button type="submit" class="btn btn-primary">Yes delete</button>
+               <a href="{% url 'dashboard' %}">Cancel</a>
+          </form>
+     </div>
+</div>
+
+{% endblock content %}
+    
